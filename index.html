@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+html{
+  font-size: 15px;
+}
+body{
+  box-sizing: border-box;
+  width: 1440px;
+  height: 80%;
+  background-color: hsl(233, 47%, 7%);
+}
+
+@media screen and (max-width: 375px){
+  body{
+    width: 375px;
+  }
+}
+
+*,*::before,*::after{
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-family:'Inter',sans-serif;
+  margin-bottom: 2vh;
+  color:  hsl(0, 0%, 100%);
+}
+h2{
+  font-size: 1.5rem;
+  font-family:'Inter',sans-serif;
+  color:  hsl(0, 0%, 100%);
+
+}
+p{
+  font-size: 1rem;
+  font-family:'Lexend Deca',serif;
+  font-weight: 100;
+  line-height: 2;
+  color:hsla(0, 0%, 100%, 0.75);
+}
+@media screen and (max-width:375px) {
+  p{
+    font-size: 1rem;}
+    h2{
+      font-size: 1.5rem;}
+      h1{
+        font-size: 2rem;}
+}
+span{
+  color:hsl(277, 64%, 61%);
+
+}
+.container{
+  display: flex;
+  margin: 10%;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px;
+
+}
+.container .child1,.child2{
+  width:50%;
+}
+
+
+
+.container .child1{
+
+  display: grid;
+  grid-template-columns: repeat(6,auto);
+  grid-template-rows: repeat(3,auto);
+  grid-template-areas: 'first first first first first first'
+                      'first first first first first first'
+                      'second second third third fourth fourth';
+grid-row-gap: 5rem;
+ margin:  5rem;
+}
+
+.child1 .content{
+  grid-area:first;
+}
+.child1 .p1{
+  grid-area:second;
+}
+.child1 .p2{
+  grid-area:third;
+}
+.child1 .p3{
+  grid-area:fourth;
+}
+img{
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width:375px) {
+  .container{
+
+flex-direction: column;
+  }
+  .container .child1,.child2{
+    margin-bottom:5rem;
+  }
+  .container .child1{
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas: 'first first first first first first'
+                        'second second second second second second'
+                        ' third third third third third third'
+                        ' fourth fourth fourth fourth fourth fourth';
+   order: 2;
+  margin: 0;
+  padding: 0 2rem;
+  grid-row-gap:2rem;
+  }
+  .child1 :last-child{
+    margin-bottom: 2rem;
+
+
+  }
+  .container .child1,.child2{
+    width:100%;
+  }
+
+  .child1 div{
+    text-align: center;
+  }
+  img{
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+<section class="container">
+
+<section class="child1" >
+<div class="content">
+  <h1>  Get <span>insights</span> that help <br>your business grow.</h1>
+  <p>Discover the benefits of data analytics and make <br>
+     better decisions regarding revenue, customer
+  experience, and overall efficiency.</p>
+</div>
+
+    <div class="p1">
+      <h2>10k+</h2>
+      <p>CONPANIES</p>
+    </div>
+    <div class="p2">
+      <h2>314</h2>
+      <p>TEMPLATES</p>
+    </div>
+    <div class="p3">
+      <h2>12m+</h2>
+      <p>QUERIES</p>
+    </div>
+
+</section>
+        <img class="child2" src="images\fiiter.jpg"
+            alt="conference hall" >
+
+</section>
+</body>
+</html>
